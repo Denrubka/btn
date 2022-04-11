@@ -14,35 +14,29 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  /*background: linear-gradient(360deg, #233eb1, #92dff8);*/
+  background: linear-gradient(to top, #93e1f8 , #3055fb,  #93e1f8);
+  background-size: 200% 200%;
   cursor: pointer;
   Color: #fff;
   font-size: 13px;
   text-transform: uppercase;
-  padding: 23px 20px;
   text-decoration: none;
+  height: 62px;
   width: 303px;
+  border-radius: 31px;
+  transition: all .3s linear;
+  box-shadow: 0px 3px 0px 0px #233eb1;
 }
-
 .btn:before {
   position: absolute;
   content: '';
-  display: block;
-  top: -120px;
-  left: 122px;
-  height: 303px;
-  width: 62px;
-  background: linear-gradient(to left, #233eb1, #92dff8 , #233eb1);
-  background-size: 200%;
-  z-index: 2;
-  transform: rotate(-90deg);
-  border-radius: 31px;
-  transition: all .3s linear;
-}
-
-.btn span {
-  position: relative;
-  z-index: 3;
+  right: 40px;
+  bottom: -3px;
+  width: 100px;
+  height: 3px;
+  background: #233eb1;
+  overflow: hidden;
+  z-index: 5;
 }
 
 .btn img {
@@ -53,12 +47,12 @@ body {
   z-index: 4;
 }
 
-.btn:hover:before {
-  background-position: right;
-}
 
 .btn:hover img {
   transform: translateY(10%) rotate(8deg);
 }
 
+.btn:hover {
+  background-position: bottom;
+}
 
