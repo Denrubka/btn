@@ -4,10 +4,42 @@
 body {
   margin: 200px;
 }
+.hidden {
+  display: none;
+}
+.wrapper {
+  display: flex;
+}
+.btn-shadow {
+  position: relative;
+  width: max-content;
+}
+.btn-shadow:before {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 303px;
+  height: 62px;
+  box-shadow: 0px 6px 34px 4px rgba(0, 126, 255, 0.2);
+  border-radius: 31px;
+}
 .btn-wrapper {
+  position: relative;
   width: 340px;
   height: 65px;
   overflow: hidden;
+}
+.btn-wrapper:before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 303px;
+  height: 100%;
+  background: transparent;
 }
 .btn {
   display: flex;
@@ -25,7 +57,7 @@ body {
   width: 303px;
   border-radius: 31px;
   transition: all .2s linear;
-  box-shadow: 0px 3px 0px 0px #233eb1;
+  box-shadow: 0px 3px 0px 0px #003cb6;
 }
 .btn:before {
   position: absolute;
@@ -34,7 +66,7 @@ body {
   bottom: -3px;
   width: 100px;
   height: 3px;
-  background: #233eb1;
+  background: #003cb6;
   overflow: hidden;
   z-index: 5;
 }
@@ -52,6 +84,7 @@ body {
   transform: translateY(10%) rotate(8deg);
 }
 
+
 .btn:hover {
   background-position: bottom;
 }
@@ -61,3 +94,54 @@ body {
   box-shadow: 0px 0px 0px 0px #233eb1;
 }
 
+.btn-play {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-image: linear-gradient(0.0deg, #3055ea 0%, #68b7fd 100%);
+  background-size: 200% 200%;
+  transition: all .2s linear;
+}
+.btn-play:hover {
+  background-position: bottom;
+}
+.btn-play:hover .btn-play-icon {
+  background-position: bottom;
+}
+.btn-play:before {
+  position: absolute;
+  content: '';
+  width: 58px;
+  height: 58px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+}
+.btn-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(0.0deg, #3055ea 0%, #68b7fd 100%);
+  background-size: 200% 200%;
+  width: 16px;
+  height: 20px;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+  border-radius: 1px 0 0 1px;
+  transition: all .2s linear;
+}
+.btn-play-icon:before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 16px;
+  height: 19px;
+  clip-path: polygon(9% 10%, 9% 90%, 86% 50%);
+}
