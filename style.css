@@ -57,7 +57,7 @@ body {
   width: 303px;
   border-radius: 31px;
   transition: all .2s linear;
-  box-shadow: 0px 3px 0px 0px #003cb6;
+  box-shadow: 0px 3px 0px 0px #003cb6 !important;
 }
 .btn:before {
   position: absolute;
@@ -102,6 +102,7 @@ body {
   background: linear-gradient(to top,  #007eff , #007eff, #4ecfff);
   background-size: 200% 200%;
   transition: all .2s linear;
+  margin-left: 50px;
 }
 .btn-play:hover {
   background-position: bottom;
@@ -123,7 +124,7 @@ body {
 .btn-play-icon {
   position: absolute;
   top: 50%;
-  left: 51%;
+  left: 0;
   transform: translate(-50%, -50%);
   background: linear-gradient(to top,  #007eff , #007eff, #4ecfff);
   background-size: 200% 200%;
@@ -144,4 +145,35 @@ body {
   width: 16px;
   height: 19px;
   clip-path: polygon(9% 10%, 9% 90%, 86% 50%);
+}
+
+.play-wrapper {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+path {
+  fill: url(#gradient);
+}
+.stop1 {
+  stop-color:  #4ecfff;
+  transition: all .2s linear;
+}
+.stop2 {
+  stop-color: #4ecfff;
+  transition: all .2s linear;
+}
+.stop3 {
+  stop-color:  #007eff;
+  transition: all .2s linear;
+}
+.play-icon-svg:hover .stop1 {
+  stop-color: #007eff;
+}
+.play-icon-svg:hover .stop2 {
+  stop-color: #007eff;
+}
+.play-icon-svg:hover .stop3 {
+  stop-color: #4ecfff;
 }
